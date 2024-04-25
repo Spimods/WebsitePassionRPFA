@@ -427,10 +427,10 @@ footer {
   .logo-img {
     margin: 20px auto;
   }
+
   .logo-top {
     display: none;
   }
-
 
   .neon-underline::after {
     width: 24vw;
