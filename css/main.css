@@ -431,7 +431,18 @@ footer {
   .logo-container {
     display: none;
   }
-
+  *::-webkit-scrollbar-track {
+    display: none;
+  }
+  
+  *::-webkit-scrollbar {
+    display: none;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    display: none;
+  }
+  
   .nom-container {
     display: flex;
     align-items: center;
