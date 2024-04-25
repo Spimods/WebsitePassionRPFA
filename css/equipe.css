@@ -1,0 +1,80 @@
+.role-container {
+    background-color: #ffffff1a;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 5%);
+    min-width: 300px;
+    position: sticky;
+    overflow: hidden;
+    z-index: 1;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.wrapper .role-container-wrapper .role-container h2 {
+    position: initial;
+}
+.role-title {
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.person-list {
+    list-style-type: none;
+    padding: 0;
+}
+.person {
+    margin-bottom: 15px;
+    text-align: center;
+}
+.person img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.person-name {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+.person-role {
+    font-style: italic;
+    color: #666;
+}
+.parallax__group {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Alignement horizontal au centre */
+    align-items: center; /* Alignement vertical au centre */
+    transform-style: preserve-3d;
+    min-height: 100vh;
+    overflow: hidden; /* Assurez-vous que le débordement est masqué pour éviter tout problème */
+}
+
+.role-container-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 20px; 
+}
+.person-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+}
+.person {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+.role-container .person-list .person {
+    width: auto; 
+}

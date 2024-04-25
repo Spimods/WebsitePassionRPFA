@@ -11,6 +11,7 @@
     <link rel="icon" type="image/png" href="../img/logo.png"/>
 
     <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/equipe.css" />
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -33,9 +34,38 @@
             <li><a href="./Équipe.html">Équipe</a></li>
             <li><a href="https://discord.gg/passionrp" class="btn">Nous rejoindre</a></li>
         </ul>
-        <div class="year-container">
-            <img width="100%" src="../img/logo.png" alt="logo">
+        <div class="role-container-wrapper">
+            <div class="role-container">
+                <h2 class="role-title">Fondateurs</h2>
+                <div class="person-list" id="Fondateur-list">
+                </div>
+            </div>
+        
+            <div class="role-container">
+                <h2 class="role-title">Co-fondateurs</h2>
+                <div class="person-list" id="Co-fondateur-list">
+                </div>
+            </div>
+        
+            <div class="role-container">
+                <h2 class="role-title">Développeurs</h2>
+                <div class="person-list" id="Développeur-list">
+                </div>
+            </div>
+
+            <div class="role-container">
+                <h2 class="role-title">Admin</h2>
+                <div class="person-list" id="Admin-list">
+                </div>
+            </div>
+
+            <div class="role-container">
+                <h2 class="role-title">Staff</h2>
+                <div class="person-list" id="Staff-list">
+                </div>
+            </div>
         </div>
+        
         <div class="social-container">
             <a href="https://www.instagram.com/PassionRp/" target="_blank"
                 ><ion-icon name="logo-instagram"></ion-icon
@@ -92,12 +122,67 @@
     </div>
     </main>
 
+    <script>
+        // Exemple de données de personnes avec leurs rôles et leurs images
+        const personnes = [
+            { nom: "Kadrox", role: "Fondateur", image: "https://cdn.discordapp.com/avatars/339113308294742016/493a38d9aa4e924a66d666203cc2d80f.webp?size=2048" },
+            { nom: "Zorr", role: "Co-fondateur", image: "https://cdn.discordapp.com/avatars/946777429668679680/9ed3a242108d56f0a2b91977b62f3f86.webp?size=2048" },
+            { nom: "Samael", role: "Développeur", image: "https://cdn.discordapp.com/avatars/516263873272086528/047ad51d36e36becbda9fb296838ce6e.webp?size=2048" },
+            { nom: "Christ", role: "Développeur", image: "https://cdn.discordapp.com/avatars/435710776175493130/6f5e8cfca4bd7d277a076744b096c2d6.webp?size=2048" },
+            { nom: "bandzaiiix", role: "Admin", image: "https://cdn.discordapp.com/avatars/626090865504419842/03ffa5fd0760cfa9b990afd0f967d190.webp?size=2048" },
+            { nom: "VirtuelGameur", role: "Staff", image: "https://cdn.discordapp.com/avatars/578212715139694602/7d7f23a6f55ad3377e8fef738fd2ee69.webp?size=2048" },
+            { nom: "Spimods", role: "Staff", image: "https://cdn.discordapp.com/avatars/894100395650072647/79799f1572572d65bbd347073e74d300.webp?size=2048" },
+            { nom: "tatatinette", role: "Staff", image: "https://cdn.discordapp.com/avatars/887369339605483520/89c2b6631b8a5d9d8149739d95ffa07d.webp?size=2048" },
+            { nom: "Lesbobos", role: "Staff", image: "https://cdn.discordapp.com/avatars/171721922176876544/03ab8a2556da8b8564affe6f776def07.webp?size=2048" },
+            { nom: "Drivule", role: "Staff", image: "https://cdn.discordapp.com/avatars/453297239989813252/4d5b8b6bdf72401a22003a4d10a73009.webp?size=2048" }
+        ];
+    
+        // Fonction pour ajouter une personne à la liste appropriée en fonction de son rôle
+        function ajouterPersonne(personne) {
+            const role = personne.role;
+            const roleList = document.getElementById(`${role}-list`);
+            if (roleList) {
+                const personDiv = document.createElement('div');
+                personDiv.classList.add('person');
+    
+                const image = document.createElement('img');
+                image.src = personne.image;
+                image.alt = personne.nom;
+                personDiv.appendChild(image);
+    
+                const name = document.createElement('div');
+                name.classList.add('person-name');
+                name.textContent = personne.nom;
+                personDiv.appendChild(name);
+    
+                const roleElement = document.createElement('div');
+                roleElement.classList.add('person-role');
+                roleElement.textContent = personne.role;
+                personDiv.appendChild(roleElement);
+    
+                roleList.appendChild(personDiv);
+            }
+        }
+    
+        personnes.forEach(ajouterPersonne);
 
-  <script>
-      var date = new Date();
-      var annee = date.getFullYear();
-      document.getElementById("year").innerHTML=annee;
     </script>
 
-  </body>
+    <script>
+        var date = new Date();
+        var annee = date.getFullYear();
+        document.getElementById("year").innerHTML=annee;
+
+        window.addEventListener('DOMContentLoaded', function() {
+            const roleContainerWrapper = document.querySelector('.role-container-wrapper');
+            const parallaxGroups = document.querySelectorAll('.parallax__group');
+            const wrapperHeight = roleContainerWrapper.offsetHeight;
+            parallaxGroups.forEach(function(group) {
+                group.style.height = wrapperHeight + 'px';
+            });
+        });
+
+    </script>
+
+</body>
 </html>
