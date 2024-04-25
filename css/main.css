@@ -428,10 +428,13 @@ footer {
     margin: 20px auto;
   }
 
-  .logo-top {
+  .logo-container {
     display: none;
   }
 
+.nom-container {
+    display: block;
+  }
   .neon-underline::after {
     width: 24vw;
     left: calc(50% - 12vw);
