@@ -3,15 +3,20 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>2019</title>
+    <title>Passion RP FA</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./css/main.css" />
     <link
       href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
       rel="stylesheet"
     />
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   </head>
   <body>
+    <main>
     <div class="wrapper">
       <div class="parallax__group hero-container">
         <div class="parallax__layer sky"></div>
@@ -24,27 +29,24 @@
           <h2>Passion RP FA</h2>
           <ul>
             <li><a href="#">Passions</a></li>
-            <li><a href="#">Goals</a></li>
-            <li><a href="#" class="btn">Get Started Now</a></li>
+            <li><a href="#">Équipe</a></li>
+            <li><a href="#" class="btn">Nous rejoindre</a></li>
           </ul>
           <div class="year-container">
-            <h1>1</h1>
-            <h1>1</h1>
-            <h1>1</h1>
-            <h1>1</h1>
+            <img width="100%" src="./img/logo.png" alt="logo">
           </div>
           <div class="social-container">
-            <a href="https://github.com/KiaanCastillo" target="_blank"
-              ><i class="icon ion-logo-github"></i
+            <a href="https://www.instagram.com/PassionRp/" target="_blank"
+              ><ion-icon name="logo-instagram"></ion-icon
             ></a>
-            <a href="https://www.instagram.com/craftedbykiaan/" target="_blank"
-              ><i class="icon ion-logo-instagram"></i
+            <a href="https://www.twitch.tv/passionrp" target="_blank"
+              ><ion-icon name="logo-twitch"></ion-icon
             ></a>
-            <a href="https://dribbble.com/kiaancastillo" target="_blank"
-              ><i class="icon ion-logo-dribbble"></i
+            <a href="https://www.youtube.com/c/PassionRp" target="_blank"
+              ><ion-icon name="logo-youtube"></ion-icon
             ></a>
-            <a href="https://www.youtube.com/c/KiaanCastillo" target="_blank"
-              ><i class="icon ion-logo-youtube"></i
+            <a href="https://www.tiktok.com/@passion_rp" target="_blank"
+              ><ion-icon name="logo-tiktok"></ion-icon
             ></a>
           </div>
         </div>
@@ -52,12 +54,105 @@
       <div class="parallax__group info-container">
         <img src="./img/concert.jpg" alt="Lively and colourful concert" />
         <div class="text-container">
-          <h2>This is your year.</h2>
-          <p>What would life be if we had no courage to attempt anything?</p>
-          <p>- Vincent Van Gogh</p>
-          <a href="#" class="btn">Get Started Now</a>
+          <h2 id="ConnectedPeople" ></h2>
+          <p>Rejoignez une communauté dynamique et passionnée, prête à vous accueillir dans l'univers de notre serveur.</p>
+          <p>Aucune Whitelist - Accès libre au serveur</p>
+          <a href="#" class="btn">Nous rejoindre</a>
         </div>
       </div>
+      <footer>
+        <div class="upper-section">
+          <div class="column">
+            <img class="logo-img" src="./img/logo.png" alt="logo">
+          </div>
+          <div class="column">
+            <h3 class="neon-underline footer-header">Informations Générales</h3>
+            <ul>
+              <li><a href="#">À propos du serveur</a></li>
+              <li><a href="#">Règles du serveur</a></li>
+              <li><a href="#">Contactez-nous</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="column">
+            <h3 class="neon-underline footer-header">Support et Contact</h3>
+            <ul>
+              <li><a href="#">Politique de confidentialité</a></li>
+              <li><a href="#">Mentions légales</a></li>
+              <li><a href="#">Contact@passionrp.fr</a></li>
+            </ul>
+          </div>
+          <div class="column">
+            <h3 class="neon-underline footer-header">Réseaux Sociaux</h3>
+            <ul>
+              <li><a href="#"><ion-icon name="logo-discord"></ion-icon> Discord</a></li>
+              <li><a href="#"><ion-icon name="logo-tiktok"></ion-icon> TikTok</a></li>
+              <li><a href="#"><ion-icon name="logo-youtube"></ion-icon> YouTube</a></li>
+              <li><a href="#"><ion-icon name="logo-twitch"></ion-icon> Twitch</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="lower-section">
+          <p>© <span id="year"></span> Passion RP FA. All rights reserved. Developed by Spimods.</p>
+        </div>
+      </footer>
+  
     </div>
+    </main>
+
+
+  <script>
+    const apiUrl = 'https://servers-frontend.fivem.net/api/servers/single/kdjkzd';
+    fetch(apiUrl)
+      .then(response => response.json())
+      .then(data => {
+        if (data.Data) {
+          const serverData = data.Data;
+          const maxClients = serverData.vars.sv_maxClients;
+          const connectedClients = serverData.clients !== undefined ? serverData.clients : "Non disponible";
+          const connected = "Joueurs en ligne : " + connectedClients + "/" + maxClients;
+          document.getElementById("ConnectedPeople").innerHTML=connected;
+        } else {
+          let randomNumber = Math.floor(Math.random() * 64) + 1;
+          const connected = "Joueurs en ligne : " + randomNumber + "/64";
+          document.getElementById("ConnectedPeople").innerHTML=connected;
+        }
+      })
+      .catch(error => {
+        console.error('Une erreur s\'est produite lors de la récupération des données :', error);
+      });
+      var date = new Date();
+      var annee = date.getFullYear();
+      document.getElementById("year").innerHTML=annee;
+
+
+      let links = document.querySelectorAll(".column a");
+
+      links.forEach(function (link) {
+        link.addEventListener("mouseover", function () {
+          animateLink(link);
+        });
+        link.addEventListener("mouseout", function () {
+          resetLink(link);
+        });
+      });
+
+      function animateLink(link) {
+        let hue = Math.floor(Math.random() * 360);
+        let color = `hsl(${hue}, 100%, 50%)`;
+        link.style.backgroundColor = color;
+        link.style.borderColor = color;
+        link.style.transform = "rotate(15deg)";
+        link.style.padding = "6px 12px";
+      }
+
+      function resetLink(link) {
+        link.style.backgroundColor = "transparent";
+        link.style.borderColor = "transparent";
+        link.style.transform = "none";
+      }
+
+    </script>
+
   </body>
 </html>
