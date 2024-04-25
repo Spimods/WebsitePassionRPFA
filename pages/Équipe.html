@@ -137,7 +137,6 @@
             { nom: "Drivule", role: "Staff", image: "https://cdn.discordapp.com/avatars/453297239989813252/4d5b8b6bdf72401a22003a4d10a73009.webp?size=2048" }
         ];
     
-        // Fonction pour ajouter une personne à la liste appropriée en fonction de son rôle
         function ajouterPersonne(personne) {
             const role = personne.role;
             const roleList = document.getElementById(`${role}-list`);
@@ -176,10 +175,22 @@
         window.addEventListener('DOMContentLoaded', function() {
             const roleContainerWrapper = document.querySelector('.role-container-wrapper');
             const parallaxGroups = document.querySelectorAll('.parallax__group');
-            const wrapperHeight = roleContainerWrapper.offsetHeight;
-            parallaxGroups.forEach(function(group) {
-                group.style.height = wrapperHeight + 'px';
-            });
+
+            function setGroupHeight() {
+                const wrapperHeight = roleContainerWrapper.offsetHeight;
+                const windowWidth = window.innerWidth;
+                let extraHeight = 0;
+
+                if (windowWidth <= 1600) {
+                    extraHeight = (wrapperHeight * 0.15);
+                }
+
+                parallaxGroups.forEach(function(group) {
+                    group.style.height = (wrapperHeight + extraHeight) + 'px';
+                });
+            }
+            setGroupHeight();
+            window.addEventListener('resize', setGroupHeight);
         });
 
     </script>
