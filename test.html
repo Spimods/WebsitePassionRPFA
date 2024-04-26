@@ -1,150 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Liste des personnes par rôle</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: auto;
-        background-color: #f7f7f7;
-    }
-    .role-container-wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center; /* Pour centrer horizontalement les role-container */
-        gap: 20px; /* Espacement entre les role-container */
-    }
-    .role-container {
-        background-color: #fff;
-        border-radius: 8px;
-        padding: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        width: 300px; /* Largeur fixe ou max-width: 300px; */
-        position: relative;
-        overflow: hidden;
-    }
-    .role-container::before {
-        content: '';
-        position: absolute;
-        top: -20px;
-        left: -20px;
-        right: -20px;
-        bottom: -20px;
-        background-color: rgba(255, 255, 255, 0.7);
-        filter: blur(10px);
-        z-index: -1;
-    }
-    .role-title {
-        font-weight: bold;
-        margin-bottom: 15px;
-        text-align: center;
-    }
-    .person-list {
-        list-style-type: none;
-        padding: 0;
-    }
-    .person {
-        margin-bottom: 15px;
-        text-align: center;
-    }
-    .person img {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        margin-bottom: 10px;
-    }
-    .person-name {
-        font-weight: bold;
-        font-size: 1.1em;
-    }
-    .person-role {
-        font-style: italic;
-        color: #666;
-    }
-</style>
+  <meta charset="UTF-8">
+  <title>CodePen - Vertical Timeline</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100i,300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet"><link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
 </head>
 <body>
+<section class="timeline">
+  <div class="container">
 
-<div class="role-container-wrapper">
-    <div class="role-container">
-        <h2 class="role-title">Fondateurs</h2>
-        <div class="person-list" id="Fondateur-list">
-            <!-- Personnes avec le rôle de fondateur seront ajoutées ici -->
+
+    <div class="timeline-item">
+      <div class="timeline-img"></div>
+      <div class="timeline-content timeline-card js--fadeInLeft">
+        <div class="timeline-img-header">
+          <h2>La naissance de NRP</h2>
         </div>
-    </div>
+        <div class="date">2023</div>
+        <p>Tout a commencé avec Alexnoviaoff, un streameur GTA RP qui a décidé de créer son propre serveur en 2023, qu'il a nommé NRP. Avec son énergie  et son enthousiasme pour le jeu de rôle, Il a attiré une communauté dévouée de joueurs.</p>
+      </div>
+    </div>   
 
-    <div class="role-container">
-        <h2 class="role-title">Co-fondateurs</h2>
-        <div class="person-list" id="Co-fondateur-list">
-            <!-- Personnes avec le rôle de co-fondateur seront ajoutées ici -->
+
+
+    <div class="timeline-item">
+      <div class="timeline-img"></div>
+      <div class="timeline-content timeline-card js--fadeInRight">
+        <div class="timeline-img-header">
+          <h2>Le renouveau avec Phoenix</h2>
         </div>
-    </div>
+        <div class="date">2023</div>
+        <p>Malheureusement, NRP a finalement fermé ses portes. Mais Alexnoviaoff n'a pas abandonné. Il a décidé de recommencer à zéro et a relancé le serveur sous le nom de Phoenix. Cette renaissance a attiré l'attention de nouveaux joueurs, ravivant la flamme de la communauté.</p>
+      </div>
+    </div>   
 
-    <div class="role-container">
-        <h2 class="role-title">Développeurs</h2>
-        <div class="person-list" id="Développeur-list">
-            <!-- Personnes avec le rôle de développeur seront ajoutées ici -->
+    <div class="timeline-item">
+      <div class="timeline-img"></div>
+      <div class="timeline-content timeline-card js--fadeInLeft">
+        <div class="timeline-img-header">
+          <h2>Le changement de cap avec Kadrox</h2>
         </div>
-    </div>
+        <div class="date">10 JULY 2016</div>
+        <p>Alors que Phoenix prenait de l'ampleur, Alexnoviaoff, le fondateur, s'est retiré du serveur. Kadrox, un administrateur expérimenté et visionnaire, est alors intervenu pour reprendre les rênes. Sous sa direction, Phoenix a été transformé en PassionRP, attirant la communauté derrière sa nouvelle vision. Kadrox est ainsi devenu le nouveau fondateur et leader de PassionRP.</p>
+      </div>
+    </div>   
 
-    <div class="role-container">
-        <h2 class="role-title">Staff</h2>
-        <div class="person-list" id="Staff-list">
-            <!-- Personnes avec le rôle de staff seront ajoutées ici -->
+
+    <div class="timeline-item">
+      <div class="timeline-img"></div>
+      <div class="timeline-content js--fadeInRight">
+        <h2>Title</h2>
+        <div class="date">22 JUN 2016</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+      </div>
+    </div>   
+
+
+
+    <div class="timeline-item">
+      <div class="timeline-img"></div>
+      <div class="timeline-content timeline-card js--fadeInLeft">
+        <div class="timeline-img-header">
+          <h2>Card Title</h2>
         </div>
-    </div>
-</div>
+        <div class="date">10 JULY 2016</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+      </div>
+    </div>   
 
-<script>
-    // Exemple de données de personnes avec leurs rôles et leurs images
-    const personnes = [
-        { nom: "Alice", role: "Fondateur", image: "https://via.placeholder.com/150" },
-        { nom: "Zorr", role: "Co-fondateur", image: "https://cdn.discordapp.com/avatars/946777429668679680/9ed3a242108d56f0a2b91977b62f3f86.webp?size=2048" },
-        { nom: "Charlie", role: "Co-fondateur", image: "https://via.placeholder.com/150" },
-        { nom: "David", role: "Développeur", image: "https://via.placeholder.com/150" },
-        { nom: "Eve", role: "Développeur", image: "https://via.placeholder.com/150" },
-        { nom: "Frank", role: "Staff", image: "https://via.placeholder.com/150" },
-        { nom: "Grace", role: "Staff", image: "https://via.placeholder.com/150" }
-    ];
 
-    // Fonction pour ajouter une personne à la liste appropriée en fonction de son rôle
-    function ajouterPersonne(personne) {
-        const role = personne.role;
-        const roleList = document.getElementById(`${role}-list`);
-        if (roleList) {
-            const personDiv = document.createElement('div');
-            personDiv.classList.add('person');
 
-            const image = document.createElement('img');
-            image.src = personne.image;
-            image.alt = personne.nom;
-            personDiv.appendChild(image);
+    <div class="timeline-item">
+      <div class="timeline-img"></div>
+      <div class="timeline-content timeline-card js--fadeInRight">
+        <div class="timeline-img-header">
+          <h2>Card Title</h2>
+        </div>
+        <div class="date">30 JULY 2016</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+      </div>
+    </div>  
 
-            const name = document.createElement('div');
-            name.classList.add('person-name');
-            name.textContent = personne.nom;
-            personDiv.appendChild(name);
 
-            const roleElement = document.createElement('div');
-            roleElement.classList.add('person-role');
-            roleElement.textContent = personne.role;
-            personDiv.appendChild(roleElement);
 
-            roleList.appendChild(personDiv);
-        }
-    }
+    <div class="timeline-item">
+      <div class="timeline-img"></div>
+      <div class="timeline-content js--fadeInLeft">
+        <div class="date">5 AUG 2016</div>
+        <h2>Quote</h2>
+        <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta explicabo debitis omnis dolor iste fugit totam quasi inventore!</blockquote>
+      </div>
+    </div>   
 
-    // Ajouter chaque personne à sa liste appropriée
-    personnes.forEach(ajouterPersonne);
-</script>
+
+
+
+    <div class="timeline-item">
+      <div class="timeline-img"></div>
+      <div class="timeline-content timeline-card js--fadeInRight">
+        <div class="timeline-img-header">
+          <h2>Card Title</h2>
+        </div>
+        <div class="date">19 AUG 2016</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+      </div>
+    </div>  
+
+
+
+    <div class="timeline-item">
+      <div class="timeline-img"></div>
+      <div class="timeline-content js--fadeInLeft">
+        <div class="date">1 SEP 2016</div>
+        <h2>Title</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ipsa ratione omnis alias cupiditate saepe atque totam aperiam sed nulla voluptatem recusandae dolor, nostrum excepturi amet in dolores. Alias, ullam.</p>
+      </div>
+    </div>   
+
+  </div>
+</section>
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js'></script><script  src="./script.js"></script>
 
 </body>
 </html>
