@@ -47,11 +47,11 @@
 .parallax__group {
     position: relative;
     display: flex;
-    justify-content: center; /* Alignement horizontal au centre */
-    align-items: center; /* Alignement vertical au centre */
+    justify-content: center;
+    align-items: center;
     transform-style: preserve-3d;
     min-height: 100vh;
-    overflow: hidden; /* Assurez-vous que le débordement est masqué pour éviter tout problème */
+    overflow: hidden;
 }
 
 .role-container-wrapper {
