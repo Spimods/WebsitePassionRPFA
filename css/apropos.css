@@ -135,14 +135,15 @@
     }
     #timeline {
         flex-direction: column; 
-        height: 76%;
+        height: 90%;
+        top: 0;
     }
     .tl-content h1 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .tl-content {
-        font-size: 12px;
+        font-size: 0.7rem;
     }
 
     .tl-item {
@@ -154,6 +155,23 @@
     }
     #timeline:hover .tl-item {
         width: 100%;
+    }
+    .tl-item:first-child:after  {
+        background: linear-gradient(to bottom,
+        rgb(28, 51, 61) 0%,
+        rgb(28, 51, 61, 0.7) 25%,
+        rgb(28, 13, 17, 0.7) 75%,
+        rgb(28, 13, 17, 0.7) 100%);
+    }
+    .tl-item:nth-child(4):after  {
+        background: linear-gradient(to bottom,
+        rgb(28, 51, 61, 0.7) 0%,
+        rgb(28, 51, 61, 0.7) 25%,
+        rgb(39, 18, 25, 0.7) 75%,
+        rgb(39, 18, 25) 100%);
+    }
+    h2, .btn {
+        z-index: 10000;
     }
 
 }
