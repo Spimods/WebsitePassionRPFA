@@ -108,8 +108,8 @@ body {
   .tl-year p {
     font-family: "Pathway Gothic One", Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 1.728rem;
-    line-height: 0;
-  }
+    line-height: 2;
+}
   
   .tl-bg {
     transform: translate3d(0, 0, 0);
