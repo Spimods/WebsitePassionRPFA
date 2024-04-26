@@ -160,8 +160,15 @@ a {
   position: absolute;
   left: 2.5rem;
   top: 2.5rem;
+  transition: transform 400ms;
 }
 
+.hero-text h2:hover {
+  transform: scale(1.1);
+}
+.nom-container {
+  display: none;
+}
 .hero-text ul {
   font-size: 0.75rem;
   position: absolute;
@@ -174,6 +181,10 @@ a {
   list-style-type: none;
   float: left;
   visibility: hidden;
+  transition: transform 200ms;
+}
+.hero-text ul li:hover {
+  transform: scale(1.2);
 }
 
 .hero-text ul li:nth-of-type(3) {

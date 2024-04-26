@@ -11,6 +11,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    transition: transform 250ms;
 }
 .wrapper .role-container-wrapper .role-container h2 {
     position: initial;
@@ -27,6 +28,7 @@
 .person {
     margin-bottom: 15px;
     text-align: center;
+    transition: transform 250ms;
 }
 .person img {
     width: 100px;
@@ -83,4 +85,10 @@
 }
 .role-container:nth-child(2) .person-list .person {
     margin-left: 20px;
+}
+.person:hover {
+    transform: scale(1.125);
+}
+.role-container:hover {
+    transform: scale(1.05);
 }
