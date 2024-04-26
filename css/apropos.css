@@ -5,7 +5,7 @@
     height: 80%;
     top: 12%;
     position: absolute;
-    overflow-x: auto; /* Modifier overflow-x pour activer le défilement horizontal */
+    overflow-x: auto;
     z-index: 1000;
 }
   
@@ -116,21 +116,26 @@
     transition: filter 0.5s ease;
     filter: grayscale(100%);
   }
-  #timeline-container {
+#timeline-container {
     overflow-x: hidden;
 }
 
 #timeline {
     position: absolute;
-    transition: left 0.3s ease; /* Animation de transition lors du déplacement */
+    transition: left 0.3s ease; 
 }
 @media only screen and (max-width: 768px) {
+    #timeline {
+        top: 15%;
+    }
+
     .tl-item:before,
     .tl-item:after {
-      width: 100%; 
+        width: 100%; 
     }
-      #timeline {
-      flex-direction: column; /* Afficher en une seule colonne */
+    #timeline {
+        flex-direction: column; 
+        height: 76%;
     }
     .tl-content h1 {
         font-size: 1.3rem;
@@ -139,9 +144,9 @@
     .tl-content {
         font-size: 12px;
     }
-  
+
     .tl-item {
-      width: 100%; 
+        width: 100%; 
     }
 
     .tl-item:hover {
@@ -149,5 +154,6 @@
     }
     #timeline:hover .tl-item {
         width: 100%;
-      }
+    }
+
 }
