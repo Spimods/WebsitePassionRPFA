@@ -194,8 +194,11 @@ window.addEventListener('DOMContentLoaded', function() {
         const windowWidth = window.innerWidth;
         let extraHeight = 0;
 
-        extraHeight = (wrapperHeight * 0.35);
-  
+        if (windowWidth > 1300) {
+            extraHeight = (wrapperHeight * 0.35);
+        } else {
+          extraHeight = (wrapperHeight * 0.15);
+        }
 
         parallaxGroups.forEach(function(group) {
             group.style.height = (wrapperHeight + extraHeight) + 'px';
