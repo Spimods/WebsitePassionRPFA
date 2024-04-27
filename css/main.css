@@ -472,3 +472,22 @@ footer {
     left: calc(50% - 12vw);
   }
 }
+.header-container {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8); /* Couleur de fond avec transparence */
+  backdrop-filter: blur(10px); /* Effet de flou */
+  z-index: 1001; /* Valeur z-index plus élevée pour que l'en-tête soit au-dessus de .info-container */
+  transition: background-color 0.3s ease; /* Transition fluide de la couleur de fond */
+}
+
+
+
+.header-container.scrolled {
+  background-color: rgba(255, 255, 255, 1); /* Couleur de fond solide au défilement */
+}
+.parallax__group.info-container {
+  position: relative;
+  z-index: 1; /* Assurez-vous que l'élément .info-container est en-dessous de l'en-tête */
+}
