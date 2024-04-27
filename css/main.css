@@ -42,6 +42,63 @@ body {
 	background-color: #616161;
 }
 
+.header-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 40px); 
+  margin: 20px;
+  height: fit-content;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  z-index: 1001;
+  transition: background-color 0.3s ease;
+  border-radius: 1em;
+  padding: 10px;
+}
+
+
+.header-container.scrolled {
+  background-color: rgba(255, 255, 255, 1); 
+}
+
+
+header ul {
+  font-size: 0.75rem;
+  position: absolute;
+  right: 2.5rem;
+  top: 5vh;
+}
+
+header ul li {
+  margin-left: 2.5rem;
+  list-style-type: none;
+  float: left;
+  visibility: hidden;
+  transition: transform 200ms;
+}
+header ul li:hover {
+  transform: scale(1.2);
+}
+
+header ul li:nth-of-type(3) {
+  visibility: visible;
+}
+
+header h2 {
+  font-size: 1.25rem;
+  position: absolute;
+  left: 2.5rem;
+  top: 5vh;
+  transition: transform 400ms;
+}
+
+header h2:hover {
+  transform: scale(1.1);
+}
+
+
+
 main {
   flex: 1;
 }
@@ -56,6 +113,7 @@ a {
   display: flex;
   align-items: center;
   cursor: pointer;
+  margin: -2vh 0 0 0;
 }
 
 .logo-top {
@@ -73,6 +131,8 @@ a {
   border-radius: 0.75rem;
   padding: 0.75rem 1.25rem;
   transition: all 0.3s ease-in-out;
+  white-space : nowrap;
+
 }
 
 .btn:hover {
@@ -155,40 +215,10 @@ a {
   z-index: 7;
 }
 
-.hero-text h2 {
-  font-size: 1.25rem;
-  position: absolute;
-  left: 2.5rem;
-  top: 2.5rem;
-  transition: transform 400ms;
-}
 
-.hero-text h2:hover {
-  transform: scale(1.1);
-}
 .nom-container {
   display: none;
-}
-.hero-text ul {
-  font-size: 0.75rem;
-  position: absolute;
-  right: 2.5rem;
-  top: 2.5rem;
-}
 
-.hero-text ul li {
-  margin-left: 2.5rem;
-  list-style-type: none;
-  float: left;
-  visibility: hidden;
-  transition: transform 200ms;
-}
-.hero-text ul li:hover {
-  transform: scale(1.2);
-}
-
-.hero-text ul li:nth-of-type(3) {
-  visibility: visible;
 }
 
 .year-container {
@@ -379,7 +409,7 @@ footer {
 
 
 @media (min-width: 760px) {
-  .hero-text ul li {
+  header ul li {
     visibility: visible;
   }
 
@@ -461,33 +491,24 @@ footer {
     right: 0;
     position: absolute;
   }
-
+  header h2 {
+    top: 3vh;
+  }
+  header ul {
+    top: 3vh;
+  }
+  
   .nom-container {
     display: flex;
     align-items: center;
     cursor: pointer;
+    margin: 0 0;
+    margin: -2vh 0 0 0 !important;
+
   }
+
   .neon-underline::after {
     width: 24vw;
     left: calc(50% - 12vw);
   }
-}
-.header-container {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.8); /* Couleur de fond avec transparence */
-  backdrop-filter: blur(10px); /* Effet de flou */
-  z-index: 1001; /* Valeur z-index plus élevée pour que l'en-tête soit au-dessus de .info-container */
-  transition: background-color 0.3s ease; /* Transition fluide de la couleur de fond */
-}
-
-
-
-.header-container.scrolled {
-  background-color: rgba(255, 255, 255, 1); /* Couleur de fond solide au défilement */
-}
-.parallax__group.info-container {
-  position: relative;
-  z-index: 1; /* Assurez-vous que l'élément .info-container est en-dessous de l'en-tête */
 }

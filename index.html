@@ -20,6 +20,20 @@
   </head>
   <body>
     <main>
+      <header class="header-container">
+        <h2 class="nom-container" onclick="location.href = '#';" ><img class="logo-top" src="./img/logo2.png" alt="logo"></h2>
+
+        <h2 class="logo-container" onclick="location.href = '#';" >
+          <img class="logo-top" src="./img/logo2.png" alt="logo">
+          <span>Passion RP FA</span>
+        </h2>
+        <ul>
+          <li><a href="./pages/Àpropos.html">Passion</a></li>
+          <li><a href="./pages/Équipe.html">Équipe</a></li>
+          <li><a href="https://discord.gg/passionrp" class="btn">Nous rejoindre</a></li>
+        </ul>
+      </header>
+
     <div class="wrapper">
       <div class="parallax__group hero-container">
         <div class="parallax__layer sky"></div>
@@ -29,19 +43,6 @@
         <div class="parallax__layer people2"></div>
         <div class="parallax__layer people3"></div>
         <div class="parallax__layer hero-text">
-          <div class="header-container">
-          <h2 class="nom-container" onclick="location.href = '#';" ><img class="logo-top" src="./img/logo2.png" alt="logo"></h2>
-
-          <h2 class="logo-container" onclick="location.href = '#';" >
-            <img class="logo-top" src="./img/logo2.png" alt="logo">
-            <span>Passion RP FA</span>
-          </h2>
-          <ul>
-            <li><a href="./pages/Àpropos.html">Passion</a></li>
-            <li><a href="./pages/Équipe.html">Équipe</a></li>
-            <li><a href="https://discord.gg/passionrp" class="btn">Nous rejoindre</a></li>
-          </ul>
-        </div>
           <div class="year-container">
             <img width="100%" src="./img/logo.png" alt="logo">
           </div>
@@ -110,8 +111,21 @@
     </div>
     </main>
 
+    <script>
+const headerContainer = document.querySelector('.header-container');
 
-  <script>
+function adjustHeaderHeight() {
+  const headerHeight = headerContainer.offsetHeight;
+  const extraHeightPercentage = 9; 
+  const extraHeight = (extraHeightPercentage / 100) * window.innerHeight; 
+  const newHeight = `calc(${headerHeight}px + ${extraHeight}px)`;
+  headerContainer.style.height = newHeight;
+}
+
+window.addEventListener('load', adjustHeaderHeight);
+      
+      </script>
+        <script>
     const apiUrl = 'https://servers-frontend.fivem.net/api/servers/single/kdjkzd';
     fetch(apiUrl)
       .then(response => response.json())
@@ -134,10 +148,8 @@
       var date = new Date();
       var annee = date.getFullYear();
       document.getElementById("year").innerHTML=annee;
-      window.addEventListener('scroll', function() {
-    var header = document.querySelector('.header-container');
-    header.classList.toggle('scrolled', window.scrollY > 0);
-});
+
+
 
     </script>
 

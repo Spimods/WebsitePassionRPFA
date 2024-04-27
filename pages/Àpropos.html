@@ -20,20 +20,22 @@
 
 </head>
 <body>
+  <header class="header-container">
+    <h2 class="nom-container" onclick="location.href = '../.';" ><img class="logo-top" src="../img/logo2.png" alt="logo"></h2>
+      <h2 class="logo-container" onclick="location.href = '../.';" >
+          <img class="logo-top" src="../img/logo2.png" alt="logo">
+      <span>Passion RP FA</span>
+      </h2>
+      <ul>
+          <li><a href="./Àpropos.html">Passion</a></li>
+          <li><a href="./Équipe.html">Équipe</a></li>
+          <li><a href="https://discord.gg/passionrp" class="btn">Nous rejoindre</a></li>
+      </ul>
+  </header>
     <main>
         <div class="wrapper">
             <div class="parallax__group hero-container">
                 <div class="parallax__layer hero-text">
-                <h2 class="nom-container" onclick="location.href = '../.';" ><img class="logo-top" src="../img/logo2.png" alt="logo"></h2>
-        <h2 class="logo-container" onclick="location.href = '../.';" >
-            <img class="logo-top" src="../img/logo2.png" alt="logo">
-        <span>Passion RP FA</span>
-        </h2>
-        <ul>
-            <li><a href="./Àpropos.html">Passion</a></li>
-            <li><a href="./Équipe.html">Équipe</a></li>
-            <li><a href="https://discord.gg/passionrp" class="btn">Nous rejoindre</a></li>
-        </ul>
 
         <section id="timeline" class="scrollable">
 
@@ -156,7 +158,21 @@
   
     </div>
     </main>
-
+    <script>
+      const headerContainer = document.querySelector('.header-container');
+      
+      function adjustHeaderHeight() {
+        const headerHeight = headerContainer.offsetHeight;
+        const extraHeightPercentage = 9; 
+        const extraHeight = (extraHeightPercentage / 100) * window.innerHeight; 
+        const newHeight = `calc(${headerHeight}px + ${extraHeight}px)`;
+        headerContainer.style.height = newHeight;
+      }
+      
+      window.addEventListener('load', adjustHeaderHeight);
+            
+            </script>
+            
     <script>
         var date = new Date();
         var annee = date.getFullYear();
@@ -184,7 +200,6 @@
     setGroupHeight();
     window.addEventListener('resize', setGroupHeight);
 });
-
     </script>
 
 

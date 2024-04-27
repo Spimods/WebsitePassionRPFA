@@ -20,11 +20,8 @@
 
   </head>
   <body>
-    <main>
-        <div class="wrapper">
-            <div class="parallax__group hero-container">
-              <div class="parallax__layer hero-text">
-              <h2 class="nom-container" onclick="location.href = '../.';" ><img class="logo-top" src="../img/logo2.png" alt="logo"></h2>
+    <header class="header-container">
+      <h2 class="nom-container" onclick="location.href = '../.';" ><img class="logo-top" src="../img/logo2.png" alt="logo"></h2>
         <h2 class="logo-container" onclick="location.href = '../.';" >
             <img class="logo-top" src="../img/logo2.png" alt="logo">
         <span>Passion RP FA</span>
@@ -34,6 +31,12 @@
             <li><a href="./Équipe.html">Équipe</a></li>
             <li><a href="https://discord.gg/passionrp" class="btn">Nous rejoindre</a></li>
         </ul>
+    </header>
+  
+    <main>
+        <div class="wrapper">
+            <div class="parallax__group hero-container">
+              <div class="parallax__layer hero-text">
         <div class="role-container-wrapper">
             <div class="role-container">
                 <h2 class="role-title">Fondateurs</h2>
@@ -121,8 +124,22 @@
   
     </div>
     </main>
-
     <script>
+      const headerContainer = document.querySelector('.header-container');
+      
+      function adjustHeaderHeight() {
+        const headerHeight = headerContainer.offsetHeight;
+        const extraHeightPercentage = 9; 
+        const extraHeight = (extraHeightPercentage / 100) * window.innerHeight; 
+        const newHeight = `calc(${headerHeight}px + ${extraHeight}px)`;
+        headerContainer.style.height = newHeight;
+      }
+      
+      window.addEventListener('load', adjustHeaderHeight);
+            
+            </script>
+            
+          <script>
         const personnes = [
             { nom: "Kadrox", role: "Fondateur", image: "https://cdn.discordapp.com/avatars/339113308294742016/493a38d9aa4e924a66d666203cc2d80f.webp?size=2048" },
             { nom: "Zorr", role: "Co-fondateur", image: "https://cdn.discordapp.com/avatars/946777429668679680/9ed3a242108d56f0a2b91977b62f3f86.webp?size=2048" },
@@ -188,7 +205,6 @@
             setGroupHeight();
             window.addEventListener('resize', setGroupHeight);
         });
-
     </script>
 
 </body>
