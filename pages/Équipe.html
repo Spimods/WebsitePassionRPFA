@@ -138,7 +138,7 @@
       window.addEventListener('load', adjustHeaderHeight);
             
             </script>
-            
+
           <script>
         const personnes = [
             { nom: "Kadrox", role: "Fondateur", image: "https://cdn.discordapp.com/avatars/339113308294742016/493a38d9aa4e924a66d666203cc2d80f.webp?size=2048" },
@@ -185,26 +185,25 @@
         var annee = date.getFullYear();
         document.getElementById("year").innerHTML=annee;
 
-        window.addEventListener('DOMContentLoaded', function() {
-            const roleContainerWrapper = document.querySelector('.role-container-wrapper');
-            const parallaxGroups = document.querySelectorAll('.parallax__group');
+window.addEventListener('DOMContentLoaded', function() {
+    const roleContainerWrapper = document.querySelector('.role-container-wrapper');
+    const parallaxGroups = document.querySelectorAll('.parallax__group');
 
-            function setGroupHeight() {
-                const wrapperHeight = roleContainerWrapper.offsetHeight;
-                const windowWidth = window.innerWidth;
-                let extraHeight = 0;
+    function setGroupHeight() {
+        const wrapperHeight = roleContainerWrapper.offsetHeight;
+        const windowWidth = window.innerWidth;
+        let extraHeight = 0;
 
-                if (windowWidth <= 1600) {
-                    extraHeight = (wrapperHeight * 0.15);
-                }
+        extraHeight = (wrapperHeight * 0.35);
+  
 
-                parallaxGroups.forEach(function(group) {
-                    group.style.height = (wrapperHeight + extraHeight) + 'px';
-                });
-            }
-            setGroupHeight();
-            window.addEventListener('resize', setGroupHeight);
+        parallaxGroups.forEach(function(group) {
+            group.style.height = (wrapperHeight + extraHeight) + 'px';
         });
+    }
+    setGroupHeight();
+    window.addEventListener('resize', setGroupHeight);
+});
     </script>
 
 </body>
