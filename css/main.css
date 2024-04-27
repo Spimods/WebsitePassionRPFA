@@ -518,12 +518,11 @@ footer {
 
 
 
-.btn2
-{
-  top: 0;
-  right: 0;
-  height: 70px;
-  width: 70px;
+.btn2 {
+  top: 5vh;
+  left: 44%;
+  height: 10%;
+  width: 12%;
   padding: 16px;
   position: absolute;
   display: flex;
@@ -532,6 +531,7 @@ footer {
   flex-direction: column;
   cursor: pointer;
   z-index: 10001;
+  /* background: aliceblue; */
 }
 
 .btn2 .bar1, .btn2 .bar2, .btn2 .bar3
@@ -539,15 +539,15 @@ footer {
   height: 4px;
   width: 100%;
   display: block;
-  background: #000;
+  background: #ffffff;
 }
 
 .close-btn
 {
-  top: 0;
-  right: 0;
-  height: 70px;
-  width: 70px;
+  top: 5vh;
+  left: 45%;
+  height: 10%;
+  width: 5%;
   padding: 20px;
   position: absolute;
   display: flex;
@@ -563,7 +563,7 @@ footer {
   height: 4px;
   width: 90%;
   display: block;
-  background: #000;
+  background: #ffffff;
   position: absolute;
 }
 
@@ -578,7 +578,7 @@ footer {
   height: 4px;
   width: 90%;
   display: block;
-  background: #000;
+  background: #ffffff;
   position: absolute;
 }
 
