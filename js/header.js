@@ -1,4 +1,3 @@
-$(".btn2").on("click", function(){
-    $(".btn2").toggleClass("close-btn");
+$("#checkbox1").on("click", function(){
     $(".menu").toggleClass("open-menu");
   });

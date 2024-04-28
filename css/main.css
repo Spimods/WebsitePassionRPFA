@@ -518,69 +518,78 @@ footer {
 
 
 
-.btn2 {
-  top: 3%;
-  left: 44%;
-  height: 10%;
-  width: 12%;
-  padding: 16px;
-  position: absolute;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-  cursor: pointer;
+
+.visuallyHidden {
+  position: fixed; 
+  overflow: hidden; 
+  clip: rect(0 0 0 0); 
+  height: 1px; width: 1px; 
+  margin: -1px; padding: 0; border: 0; 
+}
+.hamburger {
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 30px;
+  height: 30px;
+  position: fixed;
   z-index: 10001;
-  /* background: aliceblue; */
-}
-
-.btn2 .bar1, .btn2 .bar2, .btn2 .bar3
-{
-  height: 4px;
-  width: 100%;
-  display: block;
-  background: #ffffff;
-}
-
-.close-btn
-{
-  top: 3%;
-  left: 45%;
-  height: 10%;
-  width: 5%;
-  padding: 20px;
-  position: absolute;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
+  left: calc(40% - 15px);
+  top: calc(4vh - 10px);
   cursor: pointer;
 }
-
-.close-btn .bar1
-{
-  transform: rotate(-130deg);
+.hamburger .bar {
+  padding: 0;
+  width: 30px;
   height: 4px;
-  width: 90%;
+  background-color: rgb(255, 255, 255);
   display: block;
-  background: #ffffff;
-  position: absolute;
+  border-radius: 4px;
+  transition: all 0.4s ease-in-out;
+  position: absolute; 
 }
 
-.close-btn .bar2
-{
-  display: none;
+.bar1 {
+  top: 0;
 }
 
-.close-btn .bar3
-{
-  transform: rotateZ(130deg);
-  height: 4px;
-  width: 90%;
-  display: block;
-  background: #ffffff;
-  position: absolute;
+.bar2,
+.bar3 {
+  top: 13.5px;
 }
+
+.bar3 {
+  right: 0;
+}
+
+.bar4 {
+  bottom: 0;
+}
+
+.checkbox1:checked + label > .hamburger1 > .bar1{
+  transform: rotate(45deg);
+  transform-origin: 5%;
+  width: 41px
+}
+
+.checkbox1:checked + label > .hamburger1 > .bar2 {
+  transform: translateX(-40px);
+  background-color: transparent;
+}
+
+.checkbox1:checked + label > .hamburger1 > .bar3 {
+  transform: translateX(40px);
+  background-color: transparent;
+}
+
+.checkbox1:checked + label > .hamburger1 > .bar4 {
+  transform-origin: 5%;
+  transform: rotate(-45deg);
+  width: 41px;
+}
+
+
+
+
 
 .menu
 {
