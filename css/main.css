@@ -99,6 +99,126 @@ header h2:hover {
 }
 
 
+.visuallyHidden {
+  position: fixed; 
+  overflow: hidden; 
+  clip: rect(0 0 0 0); 
+  height: 1px; width: 1px; 
+  margin: -1px; padding: 0; border: 0; 
+}
+.hamburger {
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  z-index: 10001;
+  left: calc(30%);
+  top: calc(4vh - 15px);
+  cursor: pointer;
+}
+.hamburger .bar {
+  padding: 0;
+  width: 30px;
+  height: 4px;
+  background-color: rgb(255, 255, 255);
+  display: block;
+  border-radius: 4px;
+  transition: all 0.4s ease-in-out;
+  position: absolute; 
+}
+
+.bar1 {
+  top: 0;
+}
+
+.bar2,
+.bar3 {
+  top: 13.5px;
+}
+
+.bar3 {
+  right: 0;
+}
+
+.bar4 {
+  bottom: 0;
+}
+
+.checkbox1:checked + label > .hamburger1 > .bar1{
+  transform: rotate(45deg);
+  transform-origin: 5%;
+  width: 41px
+}
+
+.checkbox1:checked + label > .hamburger1 > .bar2 {
+  transform: translateX(-40px);
+  background-color: transparent;
+}
+
+.checkbox1:checked + label > .hamburger1 > .bar3 {
+  transform: translateX(40px);
+  background-color: transparent;
+}
+
+.checkbox1:checked + label > .hamburger1 > .bar4 {
+  transform-origin: 5%;
+  transform: rotate(-45deg);
+  width: 41px;
+}
+
+
+
+
+
+.menu
+{
+  display: none;
+}
+
+.open-menu {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.653);
+  backdrop-filter: blur(2px);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 5s all;
+  z-index: 10000;
+  position: fixed;
+}
+.open-menu ul
+{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+}
+
+.open-menu ul li
+{
+  list-style: none;
+  padding: 6px;
+}
+
+.open-menu ul li a
+{
+  text-decoration: none;
+  text-styling: none;
+  font-size: 5vw;
+  font-weight: 800;
+  color: #fff;
+}
+
+.open-menu ul li a:hover
+{
+  border-bottom: 5px solid #ffffff;
+  transition: 0.2s all;
+}
+
+
 
 main {
   flex: 1;
@@ -463,7 +583,7 @@ footer {
 
   .column ul li, h3, img {
     text-align: center;
-    margin: 5px 10px;
+    margin: 5px 0;
   }
 
   .logo-img {
@@ -504,7 +624,7 @@ footer {
     align-items: center;
     cursor: pointer;
     margin: 0 0;
-    margin: -2vh 0 0 0 !important;
+    margin: -2vh 0 0 -3vh !important;
 
   }
 
@@ -518,122 +638,3 @@ footer {
 
 
 
-
-.visuallyHidden {
-  position: fixed; 
-  overflow: hidden; 
-  clip: rect(0 0 0 0); 
-  height: 1px; width: 1px; 
-  margin: -1px; padding: 0; border: 0; 
-}
-.hamburger {
-  margin: 0 auto;
-  margin-top: 30px;
-  width: 30px;
-  height: 30px;
-  position: fixed;
-  z-index: 10001;
-  left: calc(40% - 15px);
-  top: calc(4vh - 10px);
-  cursor: pointer;
-}
-.hamburger .bar {
-  padding: 0;
-  width: 30px;
-  height: 4px;
-  background-color: rgb(255, 255, 255);
-  display: block;
-  border-radius: 4px;
-  transition: all 0.4s ease-in-out;
-  position: absolute; 
-}
-
-.bar1 {
-  top: 0;
-}
-
-.bar2,
-.bar3 {
-  top: 13.5px;
-}
-
-.bar3 {
-  right: 0;
-}
-
-.bar4 {
-  bottom: 0;
-}
-
-.checkbox1:checked + label > .hamburger1 > .bar1{
-  transform: rotate(45deg);
-  transform-origin: 5%;
-  width: 41px
-}
-
-.checkbox1:checked + label > .hamburger1 > .bar2 {
-  transform: translateX(-40px);
-  background-color: transparent;
-}
-
-.checkbox1:checked + label > .hamburger1 > .bar3 {
-  transform: translateX(40px);
-  background-color: transparent;
-}
-
-.checkbox1:checked + label > .hamburger1 > .bar4 {
-  transform-origin: 5%;
-  transform: rotate(-45deg);
-  width: 41px;
-}
-
-
-
-
-
-.menu
-{
-  display: none;
-}
-
-.open-menu {
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.653);
-  backdrop-filter: blur(2px);
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 5s all;
-  z-index: 10000;
-  position: fixed;
-}
-.open-menu ul
-{
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  flex-direction: column;
-}
-
-.open-menu ul li
-{
-  list-style: none;
-  padding: 6px;
-}
-
-.open-menu ul li a
-{
-  text-decoration: none;
-  text-styling: none;
-  font-size: 5vw;
-  font-weight: 800;
-  color: #fff;
-}
-
-.open-menu ul li a:hover
-{
-  border-bottom: 5px solid #ffffff;
-  transition: 0.2s all;
-}
