@@ -116,6 +116,7 @@ header h2:hover {
   left: calc(30%);
   top: calc(4vh - 15px);
   cursor: pointer;
+  display: none;
 }
 .hamburger .bar {
   padding: 0;
@@ -618,7 +619,9 @@ footer {
   header ul {
     top: 3vh;
   }
-  
+  .hamburger {
+    display: inherit;
+  }
   .nom-container {
     display: flex;
     align-items: center;
