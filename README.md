@@ -1,5 +1,5 @@
 
-<img src="https://spimods.github.io/WebsitePassionRPFA/img/logo.png" alt="Description de votre logo" style="width:300px; height:200px;">
+<img src="https://spimods.github.io/WebsitePassionRPFA/img/logo.png" alt="Description de votre logo" style="width:1028px; height:945px;">
 
 
 
