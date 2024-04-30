@@ -30,41 +30,40 @@
                 <span class="bar bar4"></span>
             </div>
         </label>
-        
         <div class="menu">
-          <ul>
-            <li><a href="../.">Home</a></li>
-            <li><a href="">Règlement</a></li>
+            <ul>
+                <li><a href="../.">Home</a></li>
+                <li><a href="">Règlement</a></li>
+                <li><a href="./Àpropos.html">Passion</a></li>
+                <li><a href="./Équipe.html">Équipe</a></li>
+                <li><a href="./contact.html">Nous contacter</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <header class="header-container">
+        <h2 class="nom-container" onclick="location.href = '../.';" ><img class="logo-top" src="../img/logo2.png" alt="logo"></h2>
+        <h2 class="logo-container" onclick="location.href = '../.';" >
+            <img class="logo-top" src="../img/logo2.png" alt="logo">
+            <span>Passion RP FA</span>
+        </h2>
+        <ul>
             <li><a href="./Àpropos.html">Passion</a></li>
             <li><a href="./Équipe.html">Équipe</a></li>
-            <li><a href="./contact.html">Nous contacter</a></li>
-          </ul>
-        </div>
-      </div>
-    
-      <header class="header-container">
-        <h2 class="nom-container" onclick="location.href = '../.';" ><img class="logo-top" src="../img/logo2.png" alt="logo"></h2>
-          <h2 class="logo-container" onclick="location.href = '../.';" >
-              <img class="logo-top" src="../img/logo2.png" alt="logo">
-          <span>Passion RP FA</span>
-          </h2>
-          <ul>
-              <li><a href="./Àpropos.html">Passion</a></li>
-              <li><a href="./Équipe.html">Équipe</a></li>
-              <li><a href="https://discord.gg/passionrp" class="btn">Nous rejoindre</a></li>
-          </ul>
-      </header>
+            <li><a href="https://discord.gg/passionrp" class="btn">Nous rejoindre</a></li>
+        </ul>
+    </header>
     
     <div class="containerregles">
         <h1>Règlement Passion RP FA</h1>
         <div id="rules-list"></div>
     </div>
-        <footer>
-            <div class="upper-section">
-                <div onclick="location.href = '../.';" class="column">
+    <footer>
+        <div class="upper-section">
+            <div onclick="location.href = '../.';" class="column">
                 <img class="logo-img" src="../img/logo2.png" alt="logo">
-                </div>
-                <div class="column">
+            </div>
+            <div class="column">
                 <h3 class="neon-underline footer-header">Informations Générales</h3>
                 <ul>
                     <li><a href="./Àpropos.html">À propos du serveur</a></li>
@@ -72,30 +71,30 @@
                     <li><a href="./contact.html">Contactez-nous</a></li>
                     <li><a href="./FAQ.html">FAQ</a></li>
                 </ul>
-                </div>
-                <div class="column">
+            </div>
+            <div class="column">
                 <h3 class="neon-underline footer-header">Support et Contact</h3>
                 <ul>
-                  <li><a href="./Politique.html">Politique de confidentialité</a></li>
-                  <li><a href="./Mentions.html">Mentions légales</a></li>
-                  <li><a href="mailto:contact@passionrp.fr">contact@passionrp.fr</a></li>
+                    <li><a href="./Politique.html">Politique de confidentialité</a></li>
+                    <li><a href="./Mentions.html">Mentions légales</a></li>
+                    <li><a href="mailto:contact@passionrp.fr">contact@passionrp.fr</a></li>
                 </ul>
-              </div>
-              <div class="column">
-                <h3 class="neon-underline footer-header">Réseaux Sociaux</h3>
-                <ul>
-                  <li><a href="https://discord.gg/passionrp"><ion-icon name="logo-discord"></ion-icon> Discord</a></li>
-                  <li><a href="https://www.tiktok.com/@passion_rp"><ion-icon name="logo-tiktok"></ion-icon> TikTok</a></li>
-                  <li><a href="https://www.youtube.com/@PassionRP_FA"><ion-icon name="logo-youtube"></ion-icon> YouTube</a></li>
-                  <li><a href="https://www.twitch.tv/passionrp"><ion-icon name="logo-twitch"></ion-icon> Twitch</a></li>
-                </ul>
-              </div>
+            </div>
+            <div class="column">
+                    <h3 class="neon-underline footer-header">Réseaux Sociaux</h3>
+                    <ul>
+                        <li><a href="https://discord.gg/passionrp"><ion-icon name="logo-discord"></ion-icon> Discord</a></li>
+                        <li><a href="https://www.tiktok.com/@passion_rp"><ion-icon name="logo-tiktok"></ion-icon> TikTok</a></li>
+                        <li><a href="https://www.youtube.com/@PassionRP_FA"><ion-icon name="logo-youtube"></ion-icon> YouTube</a></li>
+                        <li><a href="https://www.twitch.tv/passionrp"><ion-icon name="logo-twitch"></ion-icon> Twitch</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="lower-section">
-              <p>© <span id="year"></span> Passion RP FA. All rights reserved. Developed by <a style="text-decoration: none; font-weight: 900;" href="https://github.com/Spimods">Spimods</a>.</p>
+                <p>© <span id="year"></span> Passion RP FA. All rights reserved. Developed by <a style="text-decoration: none; font-weight: 900;" href="https://github.com/Spimods">Spimods</a>.</p>
             </div>
-          </footer>
-          <script>
+        </footer>
+        <script>
             const headerContainer = document.querySelector('.header-container');
             
             function adjustHeaderHeight() {
@@ -108,7 +107,7 @@
             
             window.addEventListener('load', adjustHeaderHeight);
         </script>
-                  
+
         <script>
             var date = new Date();
             var annee = date.getFullYear();
