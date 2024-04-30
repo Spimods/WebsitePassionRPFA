@@ -1,7 +1,7 @@
 <div style="text-align: center; font-family: Arial, sans-serif; color: #333; line-height: 1.6;">
     <div style="width: 70%; margin: 0 auto;">
         <div style="margin-bottom: 20px;">
-            <img src="https://spimods.github.io/WebsitePassionRPFA/img/logo.png" alt="Description de votre logo" style="width:514px; height:472px;">
+            <img src="https://spimods.github.io/WebsitePassionRPFA/img/logo.png" alt="logo passion RP FA" style="width:514px; height:472px;">
         </div>
         <h2 style="color: #FF5733;">Passion RP FA</h2>
         <p>Bienvenue sur notre serveur RP GTA ! Nous sommes ravis de vous accueillir dans notre communauté, vous pouvez vivre des aventures inoubliables dans l'univers de Grand Theft Auto.</p>
