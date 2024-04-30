@@ -498,7 +498,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const ruleElement2 = document.createElement("h2");
     ruleElement2.classList.add("title");
-    ruleElement2.innerHTML = `Règlement général`;
+    ruleElement2.innerHTML = `Règlement GÉNÉRAL`;
     rulesList.appendChild(ruleElement2);
 
     reglement.forEach(reglement => {
