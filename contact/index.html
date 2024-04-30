@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr" >
+<head>
+  <meta charset="UTF-8">
+  <title>Ozanam CyberQuest | Contact</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css?family=Raleway:100,400,700" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Oswald:200,400,700" rel="stylesheet">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+<script src="https://use.fontawesome.com/20ab91acc4.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1"><link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+	    <link rel="icon" href="./favicon.png" />
+
+<style>
+    .notifications {
+  position: fixed;
+  top: 30px;
+  right: 3%;
+color: #2a7818;
+transform: scale(1.3);
+}
+.notifications :where(.toast, .column) {
+  display: flex;
+  align-items: center;
+}
+.notifications .toast {
+  width: 400px;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  border-radius: 4px;
+  padding: 16px 17px;
+  margin-bottom: 10px;
+  background: var(--light);
+  justify-content: space-between;
+  animation: show_toast 0.3s ease forwards;
+}
+@keyframes show_toast {
+  0% {
+    transform: translateX(100%);
+  }
+  40% {
+    transform: translateX(-5%);
+  }
+  80% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+.notifications .toast.hide {
+  animation: hide_toast 0.3s ease forwards;
+}
+@keyframes hide_toast {
+  0% {
+    transform: translateX(-10px);
+  }
+  40% {
+    transform: translateX(0%);
+  }
+  80% {
+    transform: translateX(-5%);
+  }
+  100% {
+    transform: translateX(calc(100% + 20px));
+  }
+}
+.toast::before {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
+  animation: progress 5s linear forwards;
+}
+@keyframes progress {
+  100% {
+    width: 0%;
+  }
+}
+.toast.success::before, .btn#success {
+  background: var(--success);
+}
+.toast.error::before, .btn#error {
+  background: var(--error);
+}
+.toast.warning::before, .btn#warning {
+  background: var(--warning);
+}
+.toast.info::before, .btn#info {
+  background: var(--info);
+}
+.toast .column i {
+  font-size: 1.75rem;
+}
+.toast.success .column i {
+  color: var(--success);
+}
+.toast.error .column i {
+  color: var(--error);
+}
+.toast.warning .column i {
+  color: var(--warning);
+}
+.toast.info .column i {
+  color: var(--info);
+}
+.toast .column span {
+  font-size: 1.07rem;
+  margin-left: 12px;
+}
+.toast i:last-child {
+  color: #aeb0d7;
+  cursor: pointer;
+}
+.toast i:last-child:hover {
+  color: var(--dark);
+}
+.buttons .btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 0 5px;
+  color: var(--light);
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+@media screen and (max-width: 530px) {
+  .notifications {
+    width: 95%;
+  }
+  .notifications .toast {
+    width: 100%;
+    font-size: 1rem;
+    margin-left: 20px;
+  }
+  .buttons .btn {
+    margin: 0 1px;
+    font-size: 1.1rem;
+    padding: 8px 15px;
+  }
+}
+
+</style>
+
+</head>
+<body>
+
+<section id="contact">
+    <ul class="notifications"></ul>
+
+  <h1 class="section-header">Contact</h1>
+  
+  <div class="contact-wrapper">
+  
+    
+    <form id="contact-form" class="form-horizontal" method="get" action="contact.php">
+      <div class="form-group">
+        <div class="col-sm-12">
+          <input type="text" class="form-control" id="name" placeholder="SUJET" name="sujet" value="" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-12">
+          <input type="email" class="form-control" id="email" placeholder="VOTRE EMAIL" name="email" value="" required>
+        </div>
+      </div>
+
+      <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+      <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+          <span class="send-text">ENVOYER</span>
+      
+      </button>
+      
+    </form>
+        
+      <div class="direct-contact-container">
+
+        <ul class="contact-list">
+                    
+          <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:grgoire@ozanam-cyberquest.fr" title="Send me an email">grgoire@ozanam-cyberquest.fr</a></span></i></li>
+          
+        </ul>
+
+        <hr>
+        <ul class="social-media-list">
+          <li><a href="https://github.com/Spimods" target="_blank" class="contact-icon">
+            <i class="fa fa-github" aria-hidden="true"></i></a>
+          </li>
+          <li><a href="https://codepen.io/II-SPIMODS-II" target="_blank" class="contact-icon">
+            <i class="fa fa-codepen" aria-hidden="true"></i></a>
+          </li>
+        </ul>
+        <hr>
+
+        <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
+
+      </div>
+    
+  </div>
+  
+</section>
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+
+<script>
+const notifications = document.querySelector(".notifications"),
+buttons = document.querySelectorAll(".buttons .btn");
+const toastDetails = {
+    timer: 10000,
+    success: {
+        icon: 'fa-circle-check',
+        text: 'Mail envoyé, veuillez vérifier votre boîte de réception.',
+    },
+}
+const removeToast = (toast) => {
+    toast.classList.add("hide");
+    if(toast.timeoutId) clearTimeout(toast.timeoutId); 
+    setTimeout(() => toast.remove(), 500);
+}
+const createToast = (id) => {
+    const { icon, text } = toastDetails[id];
+    const toast = document.createElement("li"); 
+    toast.className = `toast ${id}`;
+    // Setting the inner HTML for the toast
+    toast.innerHTML = `<div class="column">
+                         <i class="fa-solid ${icon}"></i>
+                         <span>${text}</span>
+                      </div>
+                      <i class="fa-solid fa-xmark" onclick="removeToast(this.parentElement)"></i>`;
+    notifications.appendChild(toast); // Append the toast to the notification ul
+    // Setting a timeout to remove the toast after the specified duration
+    toast.timeoutId = setTimeout(() => removeToast(toast), toastDetails.timer);
+}
+// Adding a click event listener to each button to create a toast when clicked
+buttons.forEach(btn => {
+    btn.addEventListener("click", () => createToast(btn.id));
+});
+
+    var url = window.location.href;
+
+if (url.indexOf("?valider") !== -1) {
+    createToast('success')
+    console.log("Mail envoyé, veuillez vérifier votre boîte de réception.");
+}
+
+</script>
+</body>
+</html>
