@@ -30,7 +30,7 @@ async def on_ready():
 @tasks.loop(minutes=0.2) 
 async def check_updates():
     cursor = conn.cursor()
-    cursor.execute("SELECT * FROM mises_a_jour WHERE est_mise_a_jour = 0")
+    cursor.execute("SELECT * FROM contact WHERE est_mise_a_jour = 0")
     new_updates = cursor.fetchall()
     print('MAJ SERVER')
     if new_updates:
@@ -40,7 +40,7 @@ async def check_updates():
             channel = bot.get_channel(1121044057687330917)
             await channel.send(embed=embed)
             print(f'MESSAGE Sujet : {update[5]}, CONTENU : {update[1]}, DE {update[4]}, EMAIL : {update[6]}')
-        cursor.execute("UPDATE mises_a_jour SET est_mise_a_jour = 1 WHERE est_mise_a_jour = 0")
+        cursor.execute("UPDATE contact SET est_mise_a_jour = 1 WHERE est_mise_a_jour = 0")
     conn.commit()
 
 

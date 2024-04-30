@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Passion RP FA | Contact</title>
+
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:100,400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:200,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+
+
+  <link rel="stylesheet" href="../css/contact.css" />
+  <link rel="stylesheet" href="../css/main.css" />
+
+</head>
+<body>
+    <div class="container">
+        <input type="checkbox" id="checkbox1" class="checkbox1 visuallyHidden">
+        <label for="checkbox1">
+            <div class="hamburger hamburger1">
+                <span class="bar bar1"></span>
+                <span class="bar bar2"></span>
+                <span class="bar bar3"></span>
+                <span class="bar bar4"></span>
+            </div>
+        </label>
+        
+        <div class="menu">
+          <ul>
+            <li><a href="../.">Home</a></li>
+            <li><a href="./Règles.html">Règlement</a></li>
+            <li><a href="./Àpropos.html">Passion</a></li>
+            <li><a href="./Équipe.html">Équipe</a></li>
+            <li><a href="">Nous contacter</a></li>
+          </ul>
+        </div>
+      </div>
+    
+      <header class="header-container">
+        <h2 class="nom-container" onclick="location.href = '../.';" ><img class="logo-top" src="../img/logo2.png" alt="logo"></h2>
+          <h2 class="logo-container" onclick="location.href = '../.';" >
+              <img class="logo-top" src="../img/logo2.png" alt="logo">
+          <span>Passion RP FA</span>
+          </h2>
+          <ul>
+              <li><a href="./Àpropos.html">Passion</a></li>
+              <li><a href="./Équipe.html">Équipe</a></li>
+              <li><a href="https://discord.gg/passionrp" class="btn">Nous rejoindre</a></li>
+          </ul>
+      </header>
+    
+<section id="contact">
+    <ul class="notifications"></ul>
+
+  <h1 class="section-header">Contact</h1>
+  
+  <div class="contact-wrapper">
+  
+    
+    <form id="contact-form" class="form-horizontal" method="get" action="contact.php">
+      <div class="form-group">
+        <div class="col-sm-12">
+          <input type="text" class="form-control" id="name" placeholder="SUJET" name="sujet" value="" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-12">
+          <input type="text" class="form-control" id="email" placeholder="VOTRE NOM" name="nom" value="" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-12">
+          <input type="email" class="form-control" id="email" placeholder="VOTRE EMAIL" name="email" value="" required>
+        </div>
+      </div>
+
+      <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+      <button class="btn2 btn2-primary send-button" id="submit" type="submit" value="SEND">
+          <span class="send-text">ENVOYER</span>
+      
+      </button>
+      
+    </form>
+
+  </div>
+  
+</section>
+
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+<script src="../js/header.js"></script>
+<script>
+const notifications = document.querySelector(".notifications"),
+buttons = document.querySelectorAll(".buttons .btn");
+const toastDetails = {
+    timer: 10000,
+    success: {
+        icon: 'fa-circle-check',
+        text: 'Mail envoyé, veuillez vérifier votre boîte de réception.',
+    },
+}
+const removeToast = (toast) => {
+    toast.classList.add("hide");
+    if(toast.timeoutId) clearTimeout(toast.timeoutId); 
+    setTimeout(() => toast.remove(), 500);
+}
+const createToast = (id) => {
+    const { icon, text } = toastDetails[id];
+    const toast = document.createElement("li"); 
+    toast.className = `toast ${id}`;
+    toast.innerHTML = `<div class="column">
+<i class="fa-solid ${icon}"></i>
+<span>${text}</span>
+</div>
+<i class="fa-solid fa-xmark" onclick="removeToast(this.parentElement)"></i>`;
+    notifications.appendChild(toast); 
+    toast.timeoutId = setTimeout(() => removeToast(toast), toastDetails.timer);
+}
+buttons.forEach(btn => {
+    btn.addEventListener("click", () => createToast(btn.id));
+});
+
+    var url = window.location.href;
+
+if (url.indexOf("?valider") !== -1) {
+    createToast('success')
+    console.log("Mail envoyé, veuillez vérifier votre boîte de réception.");
+}
+
+</script>
+<script>
+    const headerContainer = document.querySelector('.header-container');
+    
+    function adjustHeaderHeight() {
+      const headerHeight = headerContainer.offsetHeight;
+      const extraHeightPercentage = 9; 
+      const extraHeight = (extraHeightPercentage / 100) * window.innerHeight; 
+      const newHeight = `calc(${headerHeight}px + ${extraHeight}px)`;
+      headerContainer.style.height = newHeight;
+    }
+    
+    window.addEventListener('load', adjustHeaderHeight);
+          
+          </script>
+          
+  <script>
+      var date = new Date();
+      var annee = date.getFullYear();
+      document.getElementById("year").innerHTML=annee;
+</script>
+</body>
+</html>
