@@ -17,7 +17,7 @@
     $random_number = str_pad(mt_rand(0, 999999999999), 12, '0', STR_PAD_LEFT);
 
 
-    $sql = "INSERT INTO contact (nom, email, message, subject, valeur) VALUES ('$nom', '$email', '$message', '$subject', '$random_number')";
+    $sql = "INSERT INTO contact (nom, email, contenu, sujet) VALUES ('$nom', '$email', '$message', '$subject')";
     mysqli_query($connexion, $sql) or die(mysqli_error($connexion));
     
     mysqli_close($connexion);
@@ -240,6 +240,6 @@
         </html>
 EOT;
     mail($to, $subject, $msg, $headers);
-    header('Location: index.html?valider');
+    header('Location: contact.html?valider');
     exit();
 ?>
